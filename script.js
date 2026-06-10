@@ -229,7 +229,7 @@ function render(data) {
             </thead>
             <tbody>
               ${data.ecosystemSection.table.rows.map(row =>
-                `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`
+                `<tr>${row.map((cell, ci) => `<td data-label="${data.ecosystemSection.table.headers[ci]}">${cell}</td>`).join('')}</tr>`
               ).join('')}
             </tbody>
           </table>

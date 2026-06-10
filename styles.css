@@ -1194,21 +1194,61 @@ body {
     padding: 0 16px;
   }
   .table-wrapper {
-    margin: 0 -16px;
-    padding: 0 16px;
+    margin: 0;
+    padding: 0;
+    overflow-x: visible;
   }
-  .ecosystem-table thead th {
-    padding: 14px 16px;
-    font-size: 10px;
-    white-space: nowrap;
+  .ecosystem-table {
+    border: none;
+    border-radius: 0;
+  }
+  .ecosystem-table thead {
+    display: none;
+  }
+  .ecosystem-table tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .ecosystem-table tbody tr {
+    display: block;
+    background: #FAFAFA;
+    border: 1px solid #F0F0F0;
+    border-radius: 12px;
+    padding: 16px;
   }
   .ecosystem-table tbody td {
-    padding: 14px 16px;
-    font-size: 12px;
-    min-width: 160px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px 0;
+    font-size: 13px;
+    border: none;
+    min-width: auto;
   }
   .ecosystem-table tbody td:first-child {
-    min-width: 140px;
+    display: block;
+    font-size: 16px;
+    padding: 0 0 10px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #F0F0F0;
+    min-width: auto;
+  }
+  .ecosystem-table tbody td:not(:last-child) {
+    border-right: none;
+  }
+  .ecosystem-table tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #9CA3AF;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    min-width: 80px;
+    flex-shrink: 0;
+  }
+  .ecosystem-table tbody td:first-child::before {
+    display: none;
   }
 
   .footer {
@@ -1260,68 +1300,6 @@ body {
     width: calc(100vw - 32px);
     right: 16px;
     max-height: 70vh;
-  }
-}
-  .logo-mobile {
-    display: block;
-  }
-  .header {
-    padding: 0 16px;
-  }
-  .header-center,
-  .header-right {
-    display: none;
-  }
-  .breadcrumb {
-    padding: 12px 16px;
-  }
-  .container {
-    padding: 0 16px;
-  }
-  .how-it-works .container {
-    flex-direction: column;
-    gap: 4rem;
-  }
-  .hiw-left {
-    width: 100%;
-  }
-  .hiw-cards {
-    grid-template-columns: 1fr;
-  }
-  .hiw-card.card-top-left,
-  .hiw-card.card-top-right,
-  .hiw-card.card-bottom-left,
-  .hiw-card.card-bottom-right {
-    border-radius: 16px;
-    border-right: 1px solid #F3F4F6;
-    border-bottom: 1px solid #F3F4F6;
-  }
-  .test-item {
-    flex-direction: column;
-    gap: 16px;
-    align-items: flex-start;
-  }
-  .test-stats {
-    gap: 24px;
-  }
-  .footer {
-    padding: 32px 16px 24px;
-  }
-  .footer-top {
-    flex-direction: column;
-    gap: 32px;
-  }
-  .footer-bottom {
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
-  }
-  .potd-card {
-    flex-direction: column;
-    padding: 24px;
-  }
-  .potd-right {
-    width: 100%;
   }
 }
 
