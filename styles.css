@@ -1246,12 +1246,16 @@ body {
     padding: 16px;
   }
   .ecosystem-table tbody td {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
     padding: 8px 0;
     font-size: 13px;
     border: none;
     vertical-align: baseline;
   }
   .ecosystem-table tbody td:first-child {
+    display: block;
     font-weight: 700;
     color: #E85E3D;
     font-size: 16px;
@@ -1260,7 +1264,6 @@ body {
     border-bottom: 1px solid #F0F0F0;
   }
   .ecosystem-table tbody td::before {
-    display: inline;
     content: attr(data-label);
     font-weight: 600;
     color: #9CA3AF;
