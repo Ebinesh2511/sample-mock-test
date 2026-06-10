@@ -545,63 +545,67 @@ body {
 .table-wrapper {
   margin: 0;
   padding: 0;
-  overflow-x: visible;
+  overflow-x: auto;
 }
 .ecosystem-table {
   width: 100%;
-  border: none;
-  border-radius: 0;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #F3F4F6;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: Inter, sans-serif;
 }
 .ecosystem-table thead {
-  display: none;
+  display: table-header-group;
 }
-.ecosystem-table tbody {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.ecosystem-table thead tr {
+  background: #1A1A1A;
 }
-.ecosystem-table tbody tr {
-  display: block;
-  background: #FAFAFA;
-  border: 1px solid #F0F0F0;
-  border-radius: 12px;
-  padding: 16px;
-}
-.ecosystem-table tbody td {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 8px 0;
-  font-size: 13px;
-  color: #6B7280;
-  border: none;
-  min-width: auto;
-}
-.ecosystem-table tbody td:first-child {
-  display: block;
+.ecosystem-table thead th {
+  padding: 24px;
   font-weight: 700;
-  color: #E85E3D;
-  font-size: 16px;
-  padding: 0 0 10px;
-  margin-bottom: 4px;
-  border-bottom: 1px solid #F0F0F0;
-  min-width: auto;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: left;
+  border-right: 1px solid #374151;
+  white-space: nowrap;
 }
-.ecosystem-table tbody td:not(:last-child) {
+.ecosystem-table thead th:last-child {
   border-right: none;
 }
-.ecosystem-table tbody td::before {
-  content: attr(data-label);
-  font-weight: 600;
-  color: #9CA3AF;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  min-width: 80px;
-  flex-shrink: 0;
+.ecosystem-table tbody {
+  display: table-row-group;
 }
-.ecosystem-table tbody td:first-child::before {
+.ecosystem-table tbody tr {
+  display: table-row;
+  background: #fff;
+}
+.ecosystem-table tbody td {
+  display: table-cell;
+  padding: 24px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6B7280;
+  border-right: 1px solid #F3F4F6;
+  border-bottom: 1px solid #F3F4F6;
+  vertical-align: top;
+}
+.ecosystem-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.ecosystem-table tbody td:last-child {
+  border-right: none;
+}
+.ecosystem-table tbody td:first-child {
+  font-weight: 700;
+  color: #E85E3D;
+}
+.ecosystem-table tbody td::before {
   display: none;
 }
 
@@ -1209,6 +1213,65 @@ body {
     font-size: 24px;
     margin-bottom: 32px;
     padding: 0 16px;
+  }
+  .ecosystem-table,
+  .ecosystem-table thead,
+  .ecosystem-table tbody,
+  .ecosystem-table tr,
+  .ecosystem-table th,
+  .ecosystem-table td {
+    display: block;
+  }
+  .ecosystem-table {
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+  .ecosystem-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+  }
+  .ecosystem-table tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .ecosystem-table tbody tr {
+    background: #FAFAFA;
+    border: 1px solid #F0F0F0;
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .ecosystem-table tbody td {
+    padding: 8px 0;
+    font-size: 13px;
+    border: none;
+    vertical-align: baseline;
+  }
+  .ecosystem-table tbody td:first-child {
+    font-weight: 700;
+    color: #E85E3D;
+    font-size: 16px;
+    padding: 0 0 10px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #F0F0F0;
+  }
+  .ecosystem-table tbody td::before {
+    display: inline;
+    content: attr(data-label);
+    font-weight: 600;
+    color: #9CA3AF;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    min-width: 80px;
+    flex-shrink: 0;
+  }
+  .ecosystem-table tbody td:first-child::before {
+    display: none;
   }
 
   .footer {
