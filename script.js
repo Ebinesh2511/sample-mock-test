@@ -66,8 +66,22 @@ function render(data) {
           <a href="#" class="header-login">${data.header.auth.login}</a>
           <a href="#" class="header-signup">${data.header.auth.signup}</a>
         </div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-nav">
+        ${data.header.navLinks.map(l => `<a href="${l.url}">${l.label}</a>`).join('')}
+      </nav>
+      <div class="mobile-auth">
+        <a href="#" class="header-login">${data.header.auth.login}</a>
+        <a href="#" class="header-signup">${data.header.auth.signup}</a>
+      </div>
+    </div>
 
     <!-- Breadcrumb -->
     <nav class="breadcrumb">${breadcrumbHTML(data.breadcrumb)}</nav>
@@ -290,6 +304,21 @@ function bindEvents() {
       menu.classList.remove('open');
     }
   });
+
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (hamburger) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('open');
+      });
+    });
+  }
 }
 
 function applyEdits(newData) {
