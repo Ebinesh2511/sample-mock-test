@@ -1,0 +1,234 @@
+{
+  "header": {
+    "logo": "PLACEMENT PREPARATION",
+    "tagline": "an HCL GUVI product",
+    "navLinks": [
+      { "label": "Aptitude", "url": "#" },
+      { "label": "Programming", "url": "#" },
+      { "label": "Company", "url": "#" },
+      { "label": "Resources", "url": "#" }
+    ],
+    "auth": {
+      "login": "Log in",
+      "signup": "Sign up"
+    }
+  },
+  "breadcrumb": [
+    { "label": "Home", "link": "#" },
+    { "label": "Mock Test", "link": "#", "active": true }
+  ],
+  "pageTitle": "Placement Preparation",
+  "mockTestSection": {
+    "heading": "Mock Tests",
+    "subheading": "Practice with curated mock tests designed for placement success.",
+    "filters": [
+      { "label": "All", "active": true },
+      { "label": "Aptitude", "active": false },
+      { "label": "Company", "active": false },
+      { "label": "DSA", "active": false },
+      { "label": "Coding", "active": false },
+      { "label": "Full-Length", "active": false }
+    ],
+    "clearFilter": "Clear",
+    "dropdownFilters": [
+      { "label": "Completion Status", "options": ["All", "Not Started", "Completed"] }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "title": "Quantitative Aptitude Mock",
+        "category": "APTITUDE",
+        "subcategory": "Special Pattern",
+        "completionStatus": "Completed",
+        "iconBg": "rgba(234, 223, 100, 0.2)",
+        "stats": {
+          "questions": "100 Qs",
+          "duration": "90 mins",
+          "difficulty": "Medium",
+          "takes": "12.8K"
+        },
+        "button": { "label": "Analysis", "filled": false }
+      },
+      {
+        "id": 2,
+        "title": "Python Coding Challenge",
+        "category": "CODING",
+        "subcategory": "Technical Assessment",
+        "completionStatus": "Completed",
+        "iconBg": "rgba(232, 94, 61, 0.2)",
+        "stats": {
+          "questions": "30 Qs",
+          "duration": "60 mins",
+          "difficulty": "Medium",
+          "takes": "8.2K"
+        },
+        "button": { "label": "Take Test", "filled": true }
+      },
+      {
+        "id": 3,
+        "title": "TCS NQT Mock Test",
+        "category": "COMPANY",
+        "subcategory": "TCS Pattern",
+        "completionStatus": "Not Started",
+        "iconBg": "rgba(100, 149, 237, 0.2)",
+        "stats": {
+          "questions": "120 Qs",
+          "duration": "120 mins",
+          "difficulty": "Hard",
+          "takes": "25.3K"
+        },
+        "button": { "label": "Take Test", "filled": true }
+      },
+      {
+        "id": 4,
+        "title": "Data Structures & Algorithms",
+        "category": "DSA",
+        "subcategory": "FAANG Prep",
+        "completionStatus": "Not Started",
+        "iconBg": "rgba(34, 197, 94, 0.2)",
+        "stats": {
+          "questions": "50 Qs",
+          "duration": "75 mins",
+          "difficulty": "Hard",
+          "takes": "18.5K"
+        },
+        "button": { "label": "Continue", "filled": false }
+      },
+      {
+        "id": 5,
+        "title": "Full-Stack Developer Mock",
+        "category": "FULL-LENGTH",
+        "subcategory": "Comprehensive",
+        "completionStatus": "Not Started",
+        "iconBg": "rgba(168, 85, 247, 0.2)",
+        "stats": {
+          "questions": "80 Qs",
+          "duration": "180 mins",
+          "difficulty": "Medium",
+          "takes": "6.1K"
+        },
+        "button": { "label": "Take Test", "filled": true }
+      }
+    ],
+    "browseLink": "Browse All Mock Tests"
+  },
+  "howItWorksSection": {
+    "heading": "How it works",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Choose Category",
+        "description": "Select from Aptitude, Coding, Company-specific or DSA modules based on your roadmap.",
+        "circleFilled": true
+      },
+      {
+        "number": 2,
+        "title": "Pick a Test",
+        "description": "Filter tests by difficulty level or specific company patterns to match your current prep.",
+        "circleFilled": false
+      },
+      {
+        "number": 3,
+        "title": "Simulate Online",
+        "description": "Take the test in a distraction-free, timed environment that mimics real hiring portals.",
+        "circleFilled": false
+      },
+      {
+        "number": 4,
+        "title": "Instant Analytics",
+        "description": "Get immediate feedback and performance insights the moment you submit your answers.",
+        "circleFilled": false
+      }
+    ],
+    "personalizedSection": {
+      "heading": "Personalized for your goals",
+      "cards": [
+        {
+          "title": "Starting Out",
+          "description": "Build your fundamentals with topic-wise drills and basic aptitude tests.",
+          "iconBg": "rgba(234, 223, 100, 0.2)"
+        },
+        {
+          "title": "Company Prep",
+          "description": "Focus on specific recruitment patterns and historical interview questions.",
+          "iconBg": "rgba(232, 94, 61, 0.2)"
+        },
+        {
+          "title": "Technical Core",
+          "description": "Sharpen your coding and DSA skills for high-stakes technical clearances.",
+          "iconBg": "rgba(234, 223, 100, 0.2)"
+        },
+        {
+          "title": "Interview Ready",
+          "description": "Simulate full-length hiring tests to polish your overall performance.",
+          "iconBg": "rgba(232, 94, 61, 0.2)"
+        }
+      ]
+    }
+  },
+  "ecosystemSection": {
+    "heading": "Structured Mock Test Ecosystem",
+    "table": {
+      "headers": ["TEST CATEGORY", "BEST FOR", "CURRICULUM FOCUS"],
+      "rows": [
+        ["Aptitude Mock Tests", "Initial screening rounds of Tier 1/2 companies.", "Arithmetic, Logical Reasoning, DI, Verbal Ability"],
+        ["Coding Mock Tests", "Technical assessments and product-based hiring.", "Core Coding, System Design, Debugging Skills"],
+        ["DSA Mock Tests", "FAANG and startup coding interviews.", "Arrays, Trees, DP, Graphs, Strings, Hashing"],
+        ["Company-Specific", "Last-minute revision for specific campus visits.", "Specific Patterns, Cutoffs, Company Q&A"],
+        ["Full-Length Mocks", "End-to-end simulation for all-round readiness.", "Integrated Sections, Adaptive Difficulty, Timed Modes"]
+      ]
+    }
+  },
+  "problemOfTheDay": {
+    "badge": "PROBLEM OF THE DAY",
+    "title": "Logical Reasoning Daily Challenge",
+    "description": "Solve a handpicked problem every day to sharpen your logical reasoning skills. Each problem comes with a detailed explanation.",
+    "endsIn": "11:42:48",
+    "problemCard": {
+      "title": "Two Sum",
+      "tags": ["ARRAYS", "EASY"],
+      "attempts": "4.9K",
+      "buttonText": "Solve Today's Problem"
+    }
+  },
+  "cta": {
+    "title": "Find a Mock Test and Start Practicing",
+    "subtitle": "Stay consistent and win things"
+  },
+  "footer": {
+    "logo": "PLACEMENT PREPARATION",
+    "columns": [
+      {
+        "title": "Learn",
+        "links": [
+          "Quantitative Aptitude",
+          "Data Interpretation",
+          "Logical Reasoning",
+          "Verbal Reasoning",
+          "Non Verbal Reasoning",
+          "Verbal Ability"
+        ]
+      },
+      {
+        "title": "Companies",
+        "links": [
+          "Accenture",
+          "CTS",
+          "Deloitte",
+          "Infosys",
+          "TCS",
+          "Wipro"
+        ]
+      },
+      {
+        "title": "Resources",
+        "links": [
+          "Blog",
+          "Web Stories",
+          "About US"
+        ]
+      }
+    ],
+    "bottom": "Private Policy | Terms & Conditions"
+  }
+}
