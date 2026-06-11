@@ -290,7 +290,7 @@ body {
 }
 .test-item {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr 1fr auto;
   align-items: center;
   gap: 24px;
   padding: 24px;
