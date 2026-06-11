@@ -212,6 +212,35 @@
       ]
     }
   },
+  "faqSection": {
+    "heading": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "What types of mock tests are available on this platform?",
+        "answer": "We offer mock tests across Aptitude, Coding, DSA, Company-Specific and Full-Length categories. Tests are based on real company patterns from Wipro, HCL, Infosys, TCS, Cognizant and more."
+      },
+      {
+        "question": "Are the mock tests designed to match actual company exam patterns?",
+        "answer": "Yes, each mock test follows the specific pattern, difficulty level and duration of the respective company's hiring exam. For example, the TCS NQT Mock Test mirrors the actual NQT structure and timing."
+      },
+      {
+        "question": "How do the test timers and submission rules work?",
+        "answer": "Each test has a fixed duration displayed before you start. The timer runs continuously once begun, and answers are auto-submitted when time expires. You can review questions during the test."
+      },
+      {
+        "question": "Can I view detailed analytics after completing a test?",
+        "answer": "Absolutely. After submitting, you get instant analytics including your score, time spent per question, topic-wise strengths and weaknesses, and comparison with average performance."
+      },
+      {
+        "question": "What is the Problem of the Day and how do I access it?",
+        "answer": "The Problem of the Day is a daily challenge that refreshes every 24 hours. It tests logical reasoning and problem-solving skills. You can solve it directly from the homepage."
+      },
+      {
+        "question": "Do I need to sign up to take mock tests?",
+        "answer": "Yes, you need to create a free account to track your progress, view analytics and get personalised recommendations. Signing up takes less than a minute."
+      }
+    ]
+  },
   "problemOfTheDay": {
     "badge": "PROBLEM OF THE DAY",
     "title": "Logical Reasoning Daily Challenge",

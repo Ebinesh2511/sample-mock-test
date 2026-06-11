@@ -242,6 +242,27 @@ function render(data) {
       </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2>${data.faqSection.heading}</h2>
+        <div class="faq-list">
+          ${data.faqSection.items.map((item, i) => `
+            <div class="faq-item${i === 0 ? ' open' : ''}">
+              <div class="faq-question-row">
+                <span class="faq-question">${item.question}</span>
+                <svg class="icon-minus" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
+                <svg class="icon-plus" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+              </div>
+              <div class="faq-answer">
+                <p>${item.answer}</p>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -308,6 +329,16 @@ function bindEvents() {
     if (!dropdown.contains(e.target)) {
       menu.classList.remove('open');
     }
+  });
+
+  // FAQ accordion - only one open at a time
+  document.querySelectorAll('.faq-question-row').forEach(row => {
+    row.addEventListener('click', () => {
+      const item = row.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
   });
 
   const hamburger = document.getElementById('hamburger');
