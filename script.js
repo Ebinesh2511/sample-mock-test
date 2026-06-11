@@ -25,9 +25,10 @@ function docIcon() {
 }
 
 function statusIcon(status) {
-  if (status === 'Completed') return '✓';
-  if (status === 'In Progress') return '◷';
-  return '○';
+  if (status === 'Completed' || status === 'Expired') return '✓';
+  if (status === 'Ongoing') return '◷';
+  if (status === 'Upcoming') return '○';
+  return '';
 }
 
 function matchesFilter(item) {
@@ -104,9 +105,9 @@ function render(data) {
         <div class="dropdown-row">
           <div class="dropdown" id="completionDropdown">
             <span class="dropdown-icon">☰</span>
-            <span class="dropdown-label">${activeStatus === 'All' ? 'Completion Status' : activeStatus}</span>
+            <span class="dropdown-label">${activeStatus === 'All' ? 'Status' : activeStatus}</span>
             <div class="dropdown-menu" id="dropdownMenu">
-              ${['All', 'Not Started', 'In Progress', 'Completed'].map(opt =>
+              ${data.mockTestSection.dropdownFilters[0].options.map(opt =>
                 `<div class="dropdown-item${opt === activeStatus ? ' selected' : ''}" data-status="${opt}">${opt}</div>`
               ).join('')}
             </div>
@@ -114,7 +115,10 @@ function render(data) {
         </div>
 
         <div class="test-items" id="testItems">
-          ${filteredItems.map(item => `
+          ${filteredItems.map(item => {
+            const dateLabel = item.dateInfo.type === 'openUntil' ? 'Open Until' :
+              item.dateInfo.type === 'closedOn' ? 'Closed on' : 'Opens on';
+            return `
             <div class="test-item" data-item-id="${item.id}">
               <div class="test-item-left">
                 <div class="test-icon" style="background:${item.iconBg}">
@@ -123,6 +127,10 @@ function render(data) {
                 <div class="test-info">
                   <h3>${item.title}</h3>
                   <div class="test-category">${item.category} • ${item.subcategory}</div>
+                  <div class="test-date-info ${item.completionStatus.toLowerCase()}">
+                    <span class="date-label">${dateLabel}:</span>
+                    <span class="date-value">${item.dateInfo.value}</span>
+                  </div>
                 </div>
               </div>
               <div class="test-stats">
@@ -131,19 +139,16 @@ function render(data) {
                   <span class="stat-label">${item.stats.duration}</span>
                 </div>
                 <div class="stat">
-                  <span class="stat-value">${item.stats.difficulty}</span>
-                  <span class="stat-label">Difficulty</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-value">${item.stats.takes}</span>
-                  <span class="stat-label">Takes</span>
+                  <span class="stat-value">${item.stats.avgTime}</span>
+                  <span class="stat-label">Avg Time</span>
                 </div>
               </div>
               <div class="test-actions">
+                <span class="status-badge ${item.completionStatus.toLowerCase()}">${item.completionStatus}</span>
                 <button class="action-btn${item.button.filled ? ' filled' : ''}">${item.button.label}</button>
               </div>
             </div>
-          `).join('')}
+          `}).join('')}
           ${filteredItems.length === 0 ? '<div class="no-results">No tests match your filters.</div>' : ''}
         </div>
 

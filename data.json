@@ -31,81 +31,114 @@
     ],
     "clearFilter": "Clear",
     "dropdownFilters": [
-      { "label": "Completion Status", "options": ["All", "Not Started", "Completed"] }
+      { "label": "Status", "options": ["All", "Ongoing", "Completed", "Expired", "Upcoming"] }
     ],
     "items": [
       {
         "id": 1,
-        "title": "Quantitative Aptitude Mock",
-        "category": "APTITUDE",
-        "subcategory": "Special Pattern",
-        "completionStatus": "Completed",
-        "iconBg": "rgba(234, 223, 100, 0.2)",
+        "title": "Wipro WILP Mock Test",
+        "category": "COMPANY",
+        "subcategory": "WILP Pattern",
+        "completionStatus": "Ongoing",
+        "iconBg": "rgba(100, 149, 237, 0.2)",
         "stats": {
-          "questions": "100 Qs",
-          "duration": "90 mins",
-          "difficulty": "Medium",
-          "takes": "12.8K"
+          "questions": "60 Qs",
+          "duration": "80 mins",
+          "avgTime": "0.57 m"
+        },
+        "dateInfo": {
+          "type": "openUntil",
+          "value": "15 Jun 2026 at 11:59 pm"
+        },
+        "button": { "label": "Take Test", "filled": true }
+      },
+      {
+        "id": 2,
+        "title": "HCL MOCK TEST",
+        "category": "COMPANY",
+        "subcategory": "HCL Pattern",
+        "completionStatus": "Completed",
+        "iconBg": "rgba(232, 94, 61, 0.2)",
+        "stats": {
+          "questions": "75 Qs",
+          "duration": "75 mins",
+          "avgTime": "37.74 m"
+        },
+        "dateInfo": {
+          "type": "closedOn",
+          "value": "01 Jun 2026 at 11:59 pm"
         },
         "button": { "label": "Analysis", "filled": false }
       },
       {
-        "id": 2,
-        "title": "Python Coding Challenge",
-        "category": "CODING",
-        "subcategory": "Technical Assessment",
-        "completionStatus": "Completed",
-        "iconBg": "rgba(232, 94, 61, 0.2)",
-        "stats": {
-          "questions": "30 Qs",
-          "duration": "60 mins",
-          "difficulty": "Medium",
-          "takes": "8.2K"
-        },
-        "button": { "label": "Take Test", "filled": true }
-      },
-      {
         "id": 3,
-        "title": "TCS NQT Mock Test",
+        "title": "Infosys Mock Test",
         "category": "COMPANY",
-        "subcategory": "TCS Pattern",
-        "completionStatus": "Not Started",
-        "iconBg": "rgba(100, 149, 237, 0.2)",
+        "subcategory": "Infosys Pattern",
+        "completionStatus": "Upcoming",
+        "iconBg": "rgba(255, 165, 0, 0.2)",
         "stats": {
-          "questions": "120 Qs",
-          "duration": "120 mins",
-          "difficulty": "Hard",
-          "takes": "25.3K"
+          "questions": "59 Qs",
+          "duration": "100 mins",
+          "avgTime": "0.48 m"
         },
-        "button": { "label": "Take Test", "filled": true }
+        "dateInfo": {
+          "type": "opensOn",
+          "value": "20 Jul 2026 at 11:59 pm"
+        },
+        "button": { "label": "Notify Me", "filled": false }
       },
       {
         "id": 4,
-        "title": "Data Structures & Algorithms",
-        "category": "DSA",
-        "subcategory": "FAANG Prep",
-        "completionStatus": "Not Started",
-        "iconBg": "rgba(34, 197, 94, 0.2)",
+        "title": "PP-Career-Diagnostic-Test",
+        "category": "FULL-LENGTH",
+        "subcategory": "Career Assessment",
+        "completionStatus": "Ongoing",
+        "iconBg": "rgba(168, 85, 247, 0.2)",
         "stats": {
-          "questions": "50 Qs",
-          "duration": "75 mins",
-          "difficulty": "Hard",
-          "takes": "18.5K"
+          "questions": "59 Qs",
+          "duration": "180 mins",
+          "avgTime": "1.73 m"
         },
-        "button": { "label": "Continue", "filled": false }
+        "dateInfo": {
+          "type": "openUntil",
+          "value": "15 Jun 2026 at 11:59 pm"
+        },
+        "button": { "label": "Take Test", "filled": true }
       },
       {
         "id": 5,
-        "title": "Full-Stack Developer Mock",
-        "category": "FULL-LENGTH",
-        "subcategory": "Comprehensive",
-        "completionStatus": "Not Started",
-        "iconBg": "rgba(168, 85, 247, 0.2)",
+        "title": "Cognizant - GenC Mock Test",
+        "category": "COMPANY",
+        "subcategory": "GenC Pattern",
+        "completionStatus": "Expired",
+        "iconBg": "rgba(34, 197, 94, 0.2)",
         "stats": {
-          "questions": "80 Qs",
-          "duration": "180 mins",
-          "difficulty": "Medium",
-          "takes": "6.1K"
+          "questions": "75 Qs",
+          "duration": "80 mins",
+          "avgTime": "0.55 m"
+        },
+        "dateInfo": {
+          "type": "closedOn",
+          "value": "05 Jun 2026 at 11:59 pm"
+        },
+        "button": { "label": "Expired", "filled": false }
+      },
+      {
+        "id": 6,
+        "title": "TCS - NQT Mock Test",
+        "category": "COMPANY",
+        "subcategory": "NQT Pattern",
+        "completionStatus": "Ongoing",
+        "iconBg": "rgba(100, 149, 237, 0.2)",
+        "stats": {
+          "questions": "95 Qs",
+          "duration": "190 mins",
+          "avgTime": "0.45 m"
+        },
+        "dateInfo": {
+          "type": "openUntil",
+          "value": "30 Jun 2026 at 11:59 pm"
         },
         "button": { "label": "Take Test", "filled": true }
       }

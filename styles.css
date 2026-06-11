@@ -289,9 +289,10 @@ body {
   margin-top: 16px;
 }
 .test-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
   align-items: center;
-  gap: 205px;
+  gap: 24px;
   padding: 24px;
   border: 1px solid #E5E7EB;
   border-radius: 12px;
@@ -329,6 +330,31 @@ body {
 .test-info .test-category {
   font-size: 14px;
   color: #6B7280;
+  margin-bottom: 4px;
+}
+.test-date-info {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.test-date-info .date-label {
+  font-weight: 600;
+}
+.test-date-info .date-value {
+  color: #6B7280;
+}
+.test-date-info.ongoing .date-label {
+  color: #059669;
+}
+.test-date-info.completed .date-label {
+  color: #6B7280;
+}
+.test-date-info.expired .date-label {
+  color: #DC2626;
+}
+.test-date-info.upcoming .date-label {
+  color: #2563EB;
 }
 .test-stats {
   display: flex;
@@ -353,6 +379,31 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.status-badge.ongoing {
+  background: #D1FAE5;
+  color: #065F46;
+}
+.status-badge.completed {
+  background: #DBEAFE;
+  color: #1E40AF;
+}
+.status-badge.expired {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+.status-badge.upcoming {
+  background: #FEF3C7;
+  color: #92400E;
 }
 .action-btn {
   display: inline-flex;
@@ -1111,7 +1162,7 @@ body {
   }
 
   .test-item {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 16px;
     align-items: flex-start;
     padding: 16px;
